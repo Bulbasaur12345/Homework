@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: "Untitled"
 author: "Liam Volk-Klos"
@@ -100,3 +101,107 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+=======
+---
+title: "Untitled"
+author: "Liam Volk-Klos"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Question #1.
+My home directory is /c/Users/liamv. The files and folders in my home directory are listed as follows  AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Documents/
+ Downloads/
+ Favorites/
+ HomeworkVolk_Klos/
+ ImportingLibraries.ipynb
+ IntelGraphicsProfiles/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+'NCH Software Suite'/
+ NTUSER.DAT
+ NTUSER.DAT{1376c576-b7d2-11ed-9f1f-9081ff2aae1c}.TM.blf
+ NTUSER.DAT{1376c576-b7d2-11ed-9f1f-9081ff2aae1c}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{1376c576-b7d2-11ed-9f1f-9081ff2aae1c}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ PrintHood@
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ TestDATA413/
+ Untitled.ipynb
+ Untitled1.ipynb
+ Untitled2.ipynb
+ Untitled3.ipynb
+ Videos/
+ anaconda3/
+ ansel/
+ example1.txt
+ example2.txt
+ example3.txt
+ example4.txt
+ example6.txt
+ file.html
+ file.txt
+ git_hist.txt
+ myfile.txt
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ tem_dir/
+ temp_dir/
+
+Question #2. 
+The command changes the directory you are in to three folders back from the home directory.Each ../ tells the computer to go back one folder.
+
+Question #3.
+The -a flag makes it so the ls command will list all files and not ignore any files starting with ".". The -l flage makes it so the ls command will use the long listing format to list the times and dates of all changes made to the files listed.
+
+Question #4.
+When using the stat command on myfile.txt, you get the name of the file as well as its size and the date and time of when it was created. It will also show the date and time of anytime it was accessed or modified as well as the unique id of the device it is on.
+
+Question #5.
+The command "ls -l myfile.txt" will show the date and time of whenever the file was created as well as whenever it is modified. It also shows which user created/modified the file.
+
+Question #7.
+Yes the timestamp shown whenever the "ls -l myfile.txt" command is used is updated whenever the "touch" command has been used.
+
+
+
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+>>>>>>> 7a0cd2d6986cbe75c9df398a8dfbc8c77cbbe09c
