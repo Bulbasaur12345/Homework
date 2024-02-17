@@ -25,7 +25,132 @@ tribble( ~x, ~y, ~w, ~z,
 
 dt
 ```
+1_a:
+```{r}
+map_dbl(dt, mean)
+```
 
+1_b.
+```{r}
+map_dbl(dt, sd)
+```
+1_c.
+```{r}
+
+map(dt, sqrt)
+
+```
+
+
+1_d.
+```{r}
+map(dt, summary)
+```
+
+
+2.
+```{r}
+simulate_exponential_means <- function() {
+  means <- numeric(10000)
+  sample <- numeric(5)
+  
+  for (i in 1:10000) {
+ 
+    sample <- rexp(5, rate = 1)
+
+    means[i] <- mean(sample)
+  }
+  return(means)
+}
+
+
+simulate_exponential_means()
+
+  hist(simulate_exponential_means(), main = "Distribution of Means", xlab = "Mean Value", col = "lightblue", border = "black")
+  
+```
+2_a.
+```{r}
+simulate_exponential_means <- function() {
+  sample <- data.frame(matrix(ncol = 10000, nrow = 5))
+
+  
+  for (i in 1:10000) {
+ 
+    sample[i] <- rexp(5, rate = 1)
+
+  }
+  
+  
+  means<-as.numeric((map(means, mean)))
+  
+  return(means)
+}
+
+
+simulate_exponential_means()
+
+  hist(simulate_exponential_means(), main = "Distribution of Means", xlab = "Mean Value", col = "lightblue", border = "black")
+```
+2_b.
+```{r}
+simulate_exponential_means <- function() {
+  sample <- data.frame(matrix(ncol = 10000, nrow = 5))
+
+  
+ 
+    sample <- replicate(10000, rexp(5, rate = 1))
+  
+  
+  means<-as.numeric((map(means, mean)))
+  
+  return(means)
+}
+
+
+  
+    hist(simulate_exponential_means(), main = "Distribution of Means", xlab = "Mean Value", col = "lightblue", border = "black")
+
+```
+
+
+
+
+2_c:
+```{r}
+simulate_exponential_means <- function(rows) {
+  sample <- data.frame(matrix(ncol = 10000, nrow = rows))
+
+  
+ 
+    sample <- replicate(10000, rexp(rows, rate = 1))
+  
+  
+  means<-as.numeric((map(means, mean)))
+  
+  return(means)
+}
+
+
+for (i in c(5,10,20)){
+  
+    hist(simulate_exponential_means(i), main = "Distribution of Means", xlab = "Mean Value", col = "lightblue", border = "black")
+}
+```
+3.
+```{r}
+output <- vector("double", ncol(mtcars))
+
+for (i in seq_along(mtcars)) { 
+  
+output[[i]] <- sd(mtcars[[i]])
+
+}
+
+output
+
+
+```
 
 ## R Markdown
 
