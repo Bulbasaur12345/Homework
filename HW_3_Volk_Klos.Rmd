@@ -39,7 +39,13 @@ wmata %>%
   facet_wrap(.~dayweek)
 
 ```
+Problem #2:
+```{r}
+years <- data.frame(dateyears= make_date(c(2021, 2031, 2000, 1800, 800, 5050, 600, 7156)))
 
+years %>%
+  filter(((year(dateyears)%%4==0&year(dateyears)%%100!=0))|year(dateyears)%%400==0)
+```
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
